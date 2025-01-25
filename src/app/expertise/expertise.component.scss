@@ -5,14 +5,6 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-
-  @media #{variables.$s-desktop} {
-    margin-top: 24px;
-  }
-
-  @media #{variables.$tablet} {
-    margin-top: 40px;
-  }
 }
 
 h2 {

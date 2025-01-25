@@ -5,7 +5,6 @@
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
 
   @media #{variables.$laptop} {
     gap: 32px;
@@ -13,11 +12,6 @@
 
   @media #{variables.$tablet} {
     flex-direction: column;
-    margin-top: 24px;
-  }
-
-  @media #{variables.$m-phone} {
-    margin-top: 80px;
   }
 }
 

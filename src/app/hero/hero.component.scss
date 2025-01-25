@@ -38,6 +38,10 @@ h1 {
   flex-direction: column;
   margin: 0;
 
+  span {
+    font-weight: 600;
+  }
+
   .wrapper {
     display: flex;
     align-items: center;
@@ -46,6 +50,7 @@ h1 {
 
   .writer {
     font-family: "Betterlett", sans-serif;
+    font-weight: 500 !important;
     color: var(--accent);
     animation: none;
   }
