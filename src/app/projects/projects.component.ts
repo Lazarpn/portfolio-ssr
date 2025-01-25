@@ -36,9 +36,9 @@ export class ProjectsComponent implements AfterViewInit {
             observer.unobserve(this.host.nativeElement);
             const videos = document.querySelectorAll("video");
             videos.forEach(video => {
-              // video.muted = true;
-              // video.loop = true;
-              // video.play();
+              video.muted = true;
+              video.loop = true;
+              video.play();
             });
           }, 1000);
         }
