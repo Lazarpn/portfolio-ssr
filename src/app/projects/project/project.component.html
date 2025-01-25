@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <video loop [style.opacity]="projectHovered ? '0.5' : '1'">
-    <source src="{{videoUrl}}" type="video/mp4">
+  <video preload="auto" loop [style.opacity]="projectHovered ? '0.5' : '1'">
+    <source src="{{videoUrl}}" type="video/webm">
   </video>
 </div>
