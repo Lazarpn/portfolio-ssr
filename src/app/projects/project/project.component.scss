@@ -33,15 +33,19 @@
     width: 100%;
   }
 
-  @media #{variables.$l-desktop} {
+  @media #{variables.$wide-desktop} {
     width: 1000px;
     height: auto;
     border-radius: 22px;
   }
 
-  video {
+  .video {
     width: 100%;
     height: 100%;
+  }
+
+  video {
+    width: 100%;
     transition: opacity 0.5s;
 
     @media #{variables.$xl-desktop} {
