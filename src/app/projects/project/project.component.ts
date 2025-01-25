@@ -23,7 +23,7 @@ export class ProjectComponent implements AfterViewInit {
   projectHovered = false;
 
   ngAfterViewInit(): void {
-    this.video.nativeElement.muted = true;
-    this.video.nativeElement.play();
+    // this.video.nativeElement.muted = true;
+    // this.video.nativeElement.play();
   }
 }
