@@ -23,11 +23,12 @@
 </video> -->
 
   <video
-    autoplay
-    loop
-    muted
-    playsinline>
-    <source [src]="videoUrl">
+    #video
+    [autoplay]="true"
+    [loop]="true"
+    [muted]="true"
+    [playsInline]="true"
+    [src]="videoUrl">
   </video>
 </div>
 
