@@ -23,10 +23,6 @@ nav {
   display: flex;
   margin-bottom: 0;
 
-  @media #{variables.$m-phone} {
-    display: none;
-  }
-
   ul {
     display: flex;
     justify-content: center;

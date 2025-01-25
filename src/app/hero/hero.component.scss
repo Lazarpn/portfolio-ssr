@@ -20,8 +20,10 @@
     height: 90dvh;
   }
 
-  @media #{variables.$m-phone} {
-    margin-top: 64px;
+  @media #{variables.$phone} {
+    justify-content: flex-start;
+    height: auto;
+    margin-top: 0;
   }
 }
 
@@ -56,6 +58,11 @@ h1 {
   align-items: center;
   color: var(--accent);
   gap: 16px;
+
+  @media #{variables.$phone} {
+    gap: 8px;
+    margin-top: 40px;
+  }
 
   .tag-1 {
     margin-left: 12px;

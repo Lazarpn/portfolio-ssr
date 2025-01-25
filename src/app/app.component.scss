@@ -24,4 +24,10 @@
   @media #{variables.$s-tablet} {
     padding: 0 40px;
   }
+
+  @media #{variables.$phone} {
+    pt-header {
+      display: none;
+    }
+  }
 }
