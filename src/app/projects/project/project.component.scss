@@ -4,6 +4,8 @@
 
 :host {
   display: flex;
+  flex-direction: column;
+  gap: 32px;
 
   &:hover {
     cursor: pointer;
@@ -23,20 +25,8 @@
     height: auto;
   }
 
-  @media #{variables.$laptop} {
-    width: 600px;
-  }
-
   @media #{variables.$xl-desktop} {
-    width: 560px;
-  }
-
-  @media #{variables.$s-desktop} {
-    width: 500px;
-  }
-
-  @media #{variables.$xs-desktop} {
-    width: 412px;
+    width: 780px;
   }
 
   @media #{variables.$tablet} {
@@ -47,6 +37,10 @@
     width: 100%;
     height: 100%;
     transition: opacity 0.5s;
+
+    @media #{variables.$xl-desktop} {
+      opacity: 1 !important;
+    }
   }
 
   .text {
@@ -92,4 +86,48 @@
   display: flex !important;
   animation: fadeInUp;
   animation-duration: 0.5s;
+
+  @media #{variables.$xl-desktop} {
+    display: none !important;
+  }
+}
+
+.text-tablet {
+  z-index: 2;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+
+  @media #{variables.$xl-desktop} {
+    display: flex !important;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  span {
+    color: var(--white);
+  }
+
+  .tags-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    gap: 12px;
+
+    .project-tag {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 24px;
+      border-radius: 30px;
+      color: var(--white);
+      background-color: var(--alt);
+    }
+  }
 }

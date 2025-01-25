@@ -33,11 +33,7 @@ h2 {
     row-gap: 40px;
   }
 
-  @media #{variables.$s-desktop} {
-    row-gap: 20px;
-  }
-
-  @media #{variables.$tablet} {
+  @media #{variables.$xl-desktop} {
     grid-template-columns: 1fr;
   }
 }

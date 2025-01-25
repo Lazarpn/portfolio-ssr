@@ -16,3 +16,13 @@
     <source src="{{videoUrl}}" type="video/webm">
   </video>
 </div>
+
+<div class="text-tablet">
+  <h3>{{heading}}</h3>
+  <span>{{description}}</span>
+  <div class="tags-wrapper">
+    @for(tag of tags; track tag) {
+      <div class="project-tag">{{tag}}</div>
+    }
+  </div>
+</div>
