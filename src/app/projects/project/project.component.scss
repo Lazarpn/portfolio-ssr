@@ -33,6 +33,12 @@
     width: 100%;
   }
 
+  @media #{variables.$l-desktop} {
+    width: 1000px;
+    height: auto;
+    border-radius: 22px;
+  }
+
   video {
     width: 100%;
     height: 100%;

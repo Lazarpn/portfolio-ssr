@@ -26,6 +26,10 @@
     width: 1200px;
     opacity: 0;
 
+    @media #{variables.$l-desktop} {
+      width: 1600px;
+    }
+
     @media #{variables.$s-desktop} {
       width: 100%;
     }

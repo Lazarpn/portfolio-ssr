@@ -57,6 +57,10 @@ img {
   object-position: 50% 30%;
   border-radius: 50%;
 
+  @media #{variables.$l-desktop} {
+    margin-top: 40px;
+  }
+
   @media #{variables.$xs-desktop} {
     width: 400px;
     height: 400px;
