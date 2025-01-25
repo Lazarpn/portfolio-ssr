@@ -1,0 +1,30 @@
+<span [class.fadeInLeft]="isIntersected" class="heading">
+  <span>I am not hard to find,</span>
+  <span>let’s create something</span>
+  <span class="wrapper">truly<span #name class="writer"></span></span>
+</span>
+
+<div [class.fadeInLeft]="isIntersected" class="info">
+  <span class="email">
+    Get in touch or shoot me an email directly on<br>
+    <span>lazarst.pngmail.com</span>
+  </span>
+
+  <span class="phone">
+    You can also call me under<br>
+    <span>+381 61 23 45 678</span>
+  </span>
+</div>
+
+<div class="ending-wrapper">
+  <div [class.fadeInLeft]="isIntersected" class="tag-wrapper">
+    <pt-tag text="body" class="tag" [isClosing]="true"></pt-tag>
+    <pt-tag text="html" [isClosing]="true"></pt-tag>
+  </div>
+
+  <div [class.fadeInRight]="isIntersected" class="button-wrapper">
+    <pt-tag text="button" class="tag"></pt-tag>
+    <pt-button color="accent">Contact Me</pt-button>
+    <pt-tag text="button" [isClosing]="true"></pt-tag>
+  </div>
+</div>

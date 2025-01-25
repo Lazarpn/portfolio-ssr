@@ -1,0 +1,131 @@
+@use "../../scss/variables" as variables;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 160px;
+
+  @media #{variables.$m-phone} {
+    margin-top: 60px;
+  }
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  opacity: 0;
+
+  span {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--white);
+
+    @media #{variables.$xs-desktop} {
+      font-size: 70px;
+    }
+
+    @media #{variables.$tablet} {
+      font-size: 60px;
+    }
+
+    @media #{variables.$phone} {
+      font-size: 38px;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    animation: none;
+  }
+
+  .writer {
+    font-family: "Betterlett", sans-serif;
+    color: var(--accent);
+    animation: none;
+  }
+}
+
+.phone {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--white);
+
+  span {
+    color: var(--accent);
+  }
+
+  @media #{variables.$phone} {
+    font-size: 22px;
+  }
+}
+
+.email {
+  width: 900px;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--white);
+
+  @media #{variables.$m-phone} {
+    width: 95%;
+  }
+
+  @media #{variables.$phone} {
+    font-size: 22px;
+  }
+
+  span {
+    color: var(--accent);
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ending-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{variables.$m-phone} {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+pt-button {
+  width: 240px;
+  align-self: flex-end;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+
+  .tag {
+    align-self: flex-end;
+  }
+}
+
+.tag-wrapper {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  gap: 12px;
+
+  .tag {
+    margin-left: 40px;
+  }
+
+  @media #{variables.$m-phone} {
+    order: 1;
+  }
+}

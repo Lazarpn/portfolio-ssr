@@ -1,0 +1,64 @@
+@use "../../scss/variables" as variables;
+@import "animate.css";
+
+:host {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.title-wrapper {
+  z-index: 2;
+  opacity: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  margin-top: 60px;
+  justify-items: center;
+  row-gap: 80px;
+
+  @media #{variables.$xxl-desktop} {
+    row-gap: 60px;
+  }
+
+  @media #{variables.$laptop} {
+    row-gap: 40px;
+  }
+
+  @media #{variables.$s-desktop} {
+    row-gap: 20px;
+  }
+
+  @media #{variables.$tablet} {
+    grid-template-columns: 1fr;
+  }
+}
+
+pt-project {
+  opacity: 0;
+}
+
+img {
+  position: absolute;
+  top: -80%;
+  left: -10%;
+  z-index: 1;
+  width: 110vw;
+  object-fit: cover;
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 1;
+  animation: fadeIn;
+  animation-duration: 3s;
+}

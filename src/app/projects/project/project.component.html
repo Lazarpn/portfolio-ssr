@@ -1,0 +1,18 @@
+<div
+  class="project"
+  (mouseleave)="projectHovered = false"
+  (mouseover)="projectHovered = true">
+  <div class="text" [class.visible-text]="projectHovered">
+    <h3>{{heading}}</h3>
+    <span>{{description}}</span>
+    <div class="tags-wrapper">
+      @for(tag of tags; track tag) {
+        <div class="project-tag">{{tag}}</div>
+      }
+    </div>
+  </div>
+
+  <video loop [style.opacity]="projectHovered ? '0.5' : '1'">
+    <source src="{{videoUrl}}" type="video/webm">
+  </video>
+</div>
