@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
+import { TagComponent } from '../shared/components/tag/tag.component';
 import { IconComponent } from '../shared/icon/icon.component';
 
 @Component({
   selector: 'pt-expertise',
-  imports: [IconComponent],
+  imports: [IconComponent, TagComponent],
   templateUrl: './expertise.component.html',
   styleUrl: './expertise.component.scss'
 })
