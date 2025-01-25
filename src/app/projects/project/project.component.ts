@@ -1,4 +1,4 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'pt-project',
@@ -6,7 +6,7 @@ import { Component, HostListener, Input } from '@angular/core';
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })
-export class ProjectComponent {
+export class ProjectComponent implements AfterViewInit {
   @Input() heading: string;
   @Input() description: string;
   @Input() videoUrl: string;
@@ -18,6 +18,12 @@ export class ProjectComponent {
     window.open(this.projectUrl, '_blank');
   }
 
+  @ViewChild('video', { read: ElementRef }) video: ElementRef;
+
   projectHovered = false;
 
+  ngAfterViewInit(): void {
+    this.video.nativeElement.muted = true;
+    this.video.nativeElement.play();
+  }
 }
