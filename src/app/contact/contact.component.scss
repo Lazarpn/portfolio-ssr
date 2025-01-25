@@ -54,9 +54,15 @@
   font-size: 28px;
   font-weight: 600;
   color: var(--white);
+  transition: color 0.2s;
 
   span {
     color: var(--accent);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--purple);
+    }
   }
 
   @media #{variables.$phone} {
@@ -80,6 +86,12 @@
 
   span {
     color: var(--accent);
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--purple);
+    }
   }
 }
 

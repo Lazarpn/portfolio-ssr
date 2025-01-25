@@ -6,13 +6,14 @@
 
 <div [class.fadeInLeft]="isIntersected" class="info">
   <span class="email">
-    Get in touch or shoot me an email directly on<br>
-    <span>lazarst.pngmail.com</span>
+    Get in touch or shoot me an email directly at :<br>
+    <span (click)="sendEmail()">lazarst.pn&commat;gmail.com</span>
   </span>
 
   <span class="phone">
-    You can also call me under<br>
-    <span>+381 61 23 45 678</span>
+    You can contact me at :<br>
+    <a href=""></a>
+    <span (click)="phoneContact()">+381 61 29 45 678</span>
   </span>
 </div>
 
@@ -24,7 +25,7 @@
 
   <div [class.fadeInRight]="isIntersected" class="button-wrapper">
     <pt-tag text="button" class="tag"></pt-tag>
-    <pt-button color="accent">Contact Me</pt-button>
+    <pt-button (buttonClick)="sendEmail()" color="accent">Contact Me</pt-button>
     <pt-tag text="button" [isClosing]="true"></pt-tag>
   </div>
 </div>

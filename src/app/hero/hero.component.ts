@@ -30,4 +30,8 @@ export class HeroComponent implements AfterViewInit {
 
     typewriterMobile.typeString(`Lazar Stojanovic`).start();
   }
+
+  sendEmail() {
+    window.location.href = 'mailto:lazarst.pn@gmail.com';
+  }
 }

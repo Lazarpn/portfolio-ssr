@@ -23,6 +23,14 @@ export class ContactComponent implements AfterViewInit {
     this.setInterceptor();
   }
 
+  sendEmail() {
+    window.location.href = 'mailto:lazarst.pn@gmail.com';
+  }
+
+  phoneContact() {
+    window.location.href = 'tel:+381 61 29 87 606';
+  }
+
   setInterceptor() {
     const options = {
       root: null,

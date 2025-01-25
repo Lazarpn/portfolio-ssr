@@ -3,7 +3,7 @@
 :host {
   z-index: 2;
   display: flex;
-  height: 240px;
+  height: auto;
   gap: 16px;
 
   @media #{variables.$xs-desktop} {
@@ -38,7 +38,7 @@
   svg {
     position: absolute;
     width: 30px;
-    height: 240px;
+    height: 100%;
 
     @media #{variables.$xs-desktop} {
       height: 100%;
