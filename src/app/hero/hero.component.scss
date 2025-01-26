@@ -31,6 +31,13 @@
   position: absolute;
   right: -20%;
   z-index: 1;
+
+  @media #{variables.$m-phone} {
+    top: 16%;
+    right: -140%;
+    width: 1025px;
+    transform: rotate(-42.66deg);
+  }
 }
 
 h1 {
