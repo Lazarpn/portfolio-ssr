@@ -1,6 +1,7 @@
 @use "../../scss/variables" as variables;
 
 :host {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -19,6 +20,7 @@
 }
 
 .instagram {
+  z-index: 2;
   width: 50px;
   height: 50px;
   background-image: url("/assets/icons/socials/instagram-white.svg");
@@ -36,6 +38,7 @@
 }
 
 .linkedin {
+  z-index: 2;
   width: 50px;
   height: 50px;
   background-image: url("/assets/icons/socials/linkedin.svg");
@@ -49,5 +52,21 @@
 
   &:hover {
     opacity: 0.7;
+  }
+}
+
+img {
+  position: absolute;
+  top: -860px;
+  right: -20%;
+  z-index: 1;
+
+  @media #{variables.$l-desktop} {
+    right: -10%;
+  }
+
+  @media #{variables.$phone} {
+    top: -530px;
+    height: 600px;
   }
 }
