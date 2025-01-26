@@ -3,3 +3,9 @@
   <router-outlet></router-outlet>
 </main>
 <pt-footer></pt-footer>
+
+@if(showLoadingSpinner) {
+  <div class="loading-overlay">
+    <pt-spinner [strokeWidth]="5" [diameter]="80"></pt-spinner>
+  </div>
+}
