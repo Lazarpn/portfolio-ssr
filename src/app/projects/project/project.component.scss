@@ -18,7 +18,6 @@
   width: 760px;
   height: 340px;
   overflow: hidden;
-  border-radius: 12px;
 
   @media #{variables.$xxl-desktop} {
     width: 640px;
@@ -36,15 +35,19 @@
   @media #{variables.$wide-desktop} {
     width: 1000px;
     height: auto;
-    border-radius: 22px;
   }
 
   video {
     width: 100%;
+    border-radius: 12px;
     transition: opacity 0.5s;
 
     @media #{variables.$xl-desktop} {
       opacity: 1 !important;
+    }
+
+    @media #{variables.$wide-desktop} {
+      border-radius: 22px;
     }
   }
 
