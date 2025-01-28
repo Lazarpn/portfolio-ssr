@@ -43,7 +43,7 @@ h2 {
 }
 
 pt-project {
-  // opacity: 0;
+  opacity: 0;
 }
 
 img {
@@ -53,16 +53,15 @@ img {
   z-index: 1;
   width: 110vw;
   object-fit: cover;
-
-  // opacity: 0;
+  opacity: 0;
 
   @media #{variables.$l-desktop} {
     top: -120%;
   }
 }
 
-// .fadeIn {
-//   opacity: 1;
-//   animation: fadeIn;
-//   animation-duration: 3s;
-// }
+.fadeIn {
+  opacity: 1;
+  animation: fadeIn;
+  animation-duration: 3s;
+}

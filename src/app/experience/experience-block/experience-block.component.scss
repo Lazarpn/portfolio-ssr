@@ -23,12 +23,8 @@
   }
 
   p {
-    width: 1200px;
+    width: 90%;
     opacity: 0;
-
-    @media #{variables.$l-desktop} {
-      width: 1600px;
-    }
 
     @media #{variables.$s-desktop} {
       width: 100%;
