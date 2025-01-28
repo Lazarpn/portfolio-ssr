@@ -90,15 +90,15 @@
   }
 }
 
-.visible-text {
-  display: flex !important;
-  animation: fadeInUp;
-  animation-duration: 0.5s;
+// .visible-text {
+//   display: flex !important;
+//   animation: fadeInUp;
+//   animation-duration: 0.5s;
 
-  @media #{variables.$xl-desktop} {
-    display: none !important;
-  }
-}
+//   @media #{variables.$xl-desktop} {
+//     display: none !important;
+//   }
+// }
 
 .text-tablet {
   z-index: 2;
