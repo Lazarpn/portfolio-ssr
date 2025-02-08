@@ -1,6 +1,37 @@
 :host {
   display: flex;
   width: 100%;
+
+  &.primary button {
+    font-weight: 900;
+    color: var(--white);
+    background-color: var(--purple);
+
+    &:hover {
+      background-color: var(--purple-20);
+    }
+  }
+
+  &.accent button {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--black);
+    background-color: var(--accent);
+
+    &:hover {
+      background-color: var(--accent-20);
+    }
+  }
+
+  &:disabled button {
+    border: none;
+    box-shadow: none;
+    opacity: 0.8;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
 }
 
 button {
@@ -13,37 +44,6 @@ button {
   outline: none;
   letter-spacing: 1.5px;
   transition: background-color 0.2s;
-
-  &.primary {
-    font-weight: 900;
-    color: var(--white);
-    background-color: var(--purple);
-
-    &:hover {
-      background-color: var(--purple-20);
-    }
-  }
-
-  &.accent {
-    font-size: 18px;
-    font-weight: 900;
-    color: var(--black);
-    background-color: var(--accent);
-
-    &:hover {
-      background-color: var(--accent-20);
-    }
-  }
-
-  &:disabled {
-    border: none;
-    box-shadow: none;
-    opacity: 0.8;
-
-    &:hover {
-      cursor: not-allowed;
-    }
-  }
 }
 
 ::ng-deep .ladda-spinner {
