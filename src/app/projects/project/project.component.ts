@@ -1,4 +1,4 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, input, Input } from '@angular/core';
 
 @Component({
   selector: 'pt-project',
@@ -17,6 +17,8 @@ export class ProjectComponent {
   onClick() {
     window.open(this.projectUrl, '_blank');
   }
+
+  title = input<string>;
 
   projectHovered = false;
 }

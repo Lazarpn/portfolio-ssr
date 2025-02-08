@@ -1,4 +1,4 @@
-<button class="{{color}}" [bgLadda]="isLoading" [disabled]="disabled" (click)="buttonClick.emit($event)">
+<button [bgLadda]="isLoading" [disabled]="disabled" (click)="buttonClick.emit($event)">
 
   @if (iconName) {
     <pt-icon [size]="iconSize" [color]="iconColor" [iconName]="iconName" [iconVariant]="iconVariant">

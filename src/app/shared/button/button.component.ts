@@ -12,7 +12,7 @@ import { LaddaModule } from '../ladda/ladda.module';
 })
 export class ButtonComponent {
   @Input()
-  @HostBinding()
+  @HostBinding('class')
   color: string = 'primary';
 
   @Input() iconName: string;
