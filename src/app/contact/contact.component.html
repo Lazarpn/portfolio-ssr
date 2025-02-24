@@ -1,10 +1,10 @@
-<span [class.fadeInLeft]="isIntersected" class="heading">
+<span [class.fade-in-left]="isIntersected" class="heading">
   <span>I am not hard to find,</span>
   <span>let’s create something</span>
   <span class="wrapper">truly<span #name class="writer"></span></span>
 </span>
 
-<div [class.fadeInLeft]="isIntersected" class="info">
+<div [class.fade-in-left]="isIntersected" class="info">
   <span class="email">
     Get in touch or shoot me an email directly at :<br>
     <span (click)="sendEmail()">lazarst.pn&commat;gmail.com</span>
@@ -18,12 +18,12 @@
 </div>
 
 <div class="ending-wrapper">
-  <div [class.fadeInLeft]="isIntersected" class="tag-wrapper">
+  <div [class.fade-in-left]="isIntersected" class="tag-wrapper">
     <pt-tag text="body" class="tag" [isClosing]="true"></pt-tag>
     <pt-tag text="html" [isClosing]="true"></pt-tag>
   </div>
 
-  <div [class.fadeInRight]="isIntersected" class="button-wrapper">
+  <div [class.fade-in-right]="isIntersected" class="button-wrapper">
     <pt-tag text="button" class="tag"></pt-tag>
     <pt-button color="accent" (buttonClick)="sendEmail()">Contact Me</pt-button>
     <pt-tag text="button" [isClosing]="true"></pt-tag>

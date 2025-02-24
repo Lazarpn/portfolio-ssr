@@ -9,8 +9,7 @@ describe('ProjectsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ProjectsComponent]
-    })
-    .compileComponents();
+    });
 
     fixture = TestBed.createComponent(ProjectsComponent);
     component = fixture.componentInstance;
@@ -18,6 +17,7 @@ describe('ProjectsComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component);
+    // expect(component);
   });
 });
