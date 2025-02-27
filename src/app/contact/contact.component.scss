@@ -18,7 +18,6 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  opacity: 0;
 
   span {
     font-size: 80px;
@@ -123,7 +122,6 @@ pt-button {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  opacity: 0;
 
   .tag {
     align-self: flex-end;
@@ -133,7 +131,6 @@ pt-button {
 .tag-wrapper {
   display: flex;
   flex-direction: column;
-  opacity: 0;
   gap: 12px;
 
   .tag {

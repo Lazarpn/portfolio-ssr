@@ -14,7 +14,6 @@ h2 {
 
 .title-wrapper {
   z-index: 2;
-  opacity: 0;
 }
 
 .wrapper {
@@ -42,10 +41,6 @@ h2 {
   }
 }
 
-pt-project {
-  opacity: 0;
-}
-
 img {
   position: absolute;
   top: -80%;
@@ -53,7 +48,6 @@ img {
   z-index: 1;
   width: 110vw;
   object-fit: cover;
-  opacity: 0;
 
   @media #{variables.$l-desktop} {
     top: -120%;

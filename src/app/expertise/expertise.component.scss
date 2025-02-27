@@ -12,10 +12,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-.title-wrapper {
-  opacity: 0;
-}
-
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -39,7 +35,6 @@ h2 {
   padding: 70px 8px 20px 70px;
   border-right: 1px solid var(--white);
   gap: 12px;
-  opacity: 0;
 
   @media #{variables.$xl-desktop} {
     padding: 40px 8px 20px 40px;
