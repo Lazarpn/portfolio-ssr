@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 
 import Typewriter from 'typewriter-effect/dist/core';
 
@@ -17,18 +18,22 @@ export class ContactComponent implements AfterViewInit {
   isIntersected = false;
   observer: IntersectionObserver | null = null;
 
-  constructor(private host: ElementRef) { }
+  constructor(private host: ElementRef, @Inject(PLATFORM_ID) private platformId: object) { }
 
   ngAfterViewInit(): void {
     this.setInterceptor();
   }
 
   sendEmail() {
-    window.location.href = 'mailto:lazarst.pn@gmail.com';
+    if (isPlatformBrowser(this.platformId)) {
+      window.location.href = 'mailto:lazarst.pn@gmail.com';
+    }
   }
 
   phoneContact() {
-    window.location.href = 'tel:+381 61 29 87 606';
+    if (isPlatformBrowser(this.platformId)) {
+      window.location.href = 'tel:+381 61 29 87 606';
+    }
   }
 
   setInterceptor() {

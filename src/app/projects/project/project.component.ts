@@ -1,4 +1,5 @@
-import { Component, HostListener, input, Input } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, Inject, Input, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'pt-project',
@@ -15,10 +16,12 @@ export class ProjectComponent {
 
   @HostListener('click')
   onClick() {
-    window.open(this.projectUrl, '_blank');
+    if (isPlatformBrowser(this.platformId)) {
+      window.open(this.projectUrl, '_blank');
+    }
   }
 
-  title = input<string>;
+  constructor(@Inject(PLATFORM_ID) private platformId: object) { }
 
   projectHovered = false;
 }

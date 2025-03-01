@@ -4,43 +4,44 @@
   <pt-tag text="h2" [isClosing]="true"></pt-tag>
 </div>
 
-<div class="wrapper">
-  <pt-project
-    heading="Idealno Venčanje"
-    description="A web planning platform for efficient wedding planning"
-    title="nana"
-    videoUrl="/assets/videos/idealwedding.webm"
-    projectUrl="https://idealno-vencanje-staging.netlify.app/"
-    [class.fade-in-left]="isIntersected"
-    [tags]="['Angular', 'ASP.NET Core', 'MSSQL', 'Azure']">
-  </pt-project>
+@if(isBrowser) {
+  <div class="wrapper">
+    <pt-project
+      heading="Idealno Venčanje"
+      description="A web planning platform for efficient wedding planning"
+      videoUrl="/assets/videos/idealwedding.webm"
+      projectUrl="https://idealno-vencanje-staging.netlify.app/"
+      [class.fade-in-left]="isIntersected"
+      [tags]="['Angular', 'ASP.NET Core', 'MSSQL', 'Azure']">
+    </pt-project>
 
-  <pt-project
-    heading="FonBoard"
-    description="A student engagement platform for seamless job application"
-    videoUrl="/assets/videos/fonboard.webm"
-    projectUrl="https://onboard.fon.bg.ac.rs/"
-    [class.fade-in-right]="isIntersected"
-    [tags]="['Angular', 'Nest', 'PostgreSQL']">
-  </pt-project>
+    <pt-project
+      heading="FonBoard"
+      description="A student engagement platform for seamless job application"
+      videoUrl="/assets/videos/fonboard.webm"
+      projectUrl="https://onboard.fon.bg.ac.rs/"
+      [class.fade-in-right]="isIntersected"
+      [tags]="['Angular', 'Nest', 'PostgreSQL']">
+    </pt-project>
 
-  <pt-project
-    heading="Branded Games"
-    description="A web platform for personal game customization"
-    videoUrl="/assets/videos/brandedgames.webm"
-    projectUrl="https://thebrandedgames.com/"
-    [class.fade-in-left]="isIntersected"
-    [tags]="['Angular', '.NET', 'MSSQL']">
-  </pt-project>
+    <pt-project
+      heading="Branded Games"
+      description="A web platform for personal game customization"
+      videoUrl="/assets/videos/brandedgames.webm"
+      projectUrl="https://thebrandedgames.com/"
+      [class.fade-in-left]="isIntersected"
+      [tags]="['Angular', '.NET', 'MSSQL']">
+    </pt-project>
 
-  <pt-project
-    heading="Companies to Students"
-    description="A website for student organization, event - Companies to Students"
-    videoUrl="/assets/videos/c2s.webm"
-    projectUrl="https://c2s.fonis.rs/"
-    [class.fade-in-right]="isIntersected"
-    [tags]="['Angular', '.NET', 'Azure']">
-  </pt-project>
-</div>
+    <pt-project
+      heading="Companies to Students"
+      description="A website for student organization, event - Companies to Students"
+      videoUrl="/assets/videos/c2s.webm"
+      projectUrl="https://c2s.fonis.rs/"
+      [class.fade-in-right]="isIntersected"
+      [tags]="['Angular', '.NET', 'Azure']">
+    </pt-project>
+  </div>
+}
 
 <img [class.fade-in]="isIntersected" src="/assets/images/projects-background.png" alt="Background">

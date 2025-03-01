@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 
 import Typewriter from 'typewriter-effect/dist/core';
 
@@ -14,6 +15,8 @@ import { TagComponent } from '../shared/components/tag/tag.component';
 export class HeroComponent implements AfterViewInit {
   @ViewChild('name', { read: ElementRef }) name: ElementRef;
   @ViewChild('nameMobile', { read: ElementRef }) nameMobile: ElementRef;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: object) { }
 
   ngAfterViewInit(): void {
     const typewriter = new Typewriter(this.name.nativeElement, {
@@ -32,6 +35,8 @@ export class HeroComponent implements AfterViewInit {
   }
 
   sendEmail() {
-    window.location.href = 'mailto:lazarst.pn@gmail.com';
+    if (isPlatformBrowser(this.platformId)) {
+      window.location.href = 'mailto:lazarst.pn@gmail.com';
+    }
   }
 }

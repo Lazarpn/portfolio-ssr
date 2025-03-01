@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
 
 import { TagComponent } from '../shared/components/tag/tag.component';
 import { ProjectComponent } from './project/project.component';
@@ -12,8 +13,11 @@ import { ProjectComponent } from './project/project.component';
 export class ProjectsComponent implements AfterViewInit {
   isIntersected = false;
   observer: IntersectionObserver | null = null;
+  isBrowser: boolean;
 
-  constructor(private host: ElementRef) { }
+  constructor(private host: ElementRef, @Inject(PLATFORM_ID) private platformId: object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngAfterViewInit(): void {
     this.setInterceptor();
